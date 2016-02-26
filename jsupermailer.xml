@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension version="3.4.8" type="plugin" group="system" method="upgrade">
+    <name>JSuperMailer</name>
+    <author>Weble Srl</author>
+    <creationDate>2016-02-26</creationDate>
+    <copyright>Copyright (C) 2016 Weble Srl . All rights reserved.</copyright>
+    <license>GNU General Public License version 2 or later; see LICENSE.txt</license>
+    <authorEmail>daniele@weble.it</authorEmail>
+    <authorUrl>http://www.weble.it</authorUrl>
+    <version>1.0.0</version>
+    <description>PLG_SYSTEM_JSUPERMAILER</description>
+    <files>
+        <folder>jsupermailer</folder>
+        <file plugin="jsupermailer">jsupermailer.php</file>
+    </files>
+    <languages folder="administrator/language">
+        <language tag="en-GB">en-GB/en-GB.plg_system_jsupermailer.sys.ini</language>
+    </languages>
+    <config>
+        <fields name="params">
+            <fieldset name="basic">
+                <field name="transport" type="list"
+                       description="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_DESCRIPTION"
+                       label="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_LABEL"
+                >
+                    <option value="mail">PLG_SYSTEM_JSUPERMAILER_TRANSPORT_MAIL</option>
+                    <option value="sendmail">PLG_SYSTEM_JSUPERMAILER_TRANSPORT_SENDMAIL</option>
+                    <option value="smtp">PLG_SYSTEM_JSUPERMAILER_TRANSPORT_SMTP</option>
+                    <option value="mandrill">PLG_SYSTEM_JSUPERMAILER_TRANSPORT_MANDRILL</option>
+                    <option value="mailgun">PLG_SYSTEM_JSUPERMAILER_TRANSPORT_MAILGUN</option>
+                    <option value="ses">PLG_SYSTEM_JSUPERMAILER_TRANSPORT_SES</option>
+                </field>
+                <field type="spacer" label="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_MANDRILL" />
+                <field name="mandrill_key" type="password"
+                       label="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_MANDRILL_KEY_LABEL"
+                       description="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_MANDRILL_KEY_DESC"
+                />
+                <field type="spacer" label="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_MAILGUN" />
+                <field name="mailgun_key" type="password"
+                       label="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_MAILGUN_KEY_LABEL"
+                       description="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_MAILGUN_KEY_DESC"
+                />
+                <field name="mailgun_domain" type="text"
+                       label="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_MAILGUN_DOMAIN_LABEL"
+                       description="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_MAILGUN_DOMAIN_DESC"
+                />
+                <field type="spacer" label="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_SES" />
+                <field name="ses_key" type="text"
+                       label="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_SES_KEY_LABEL"
+                       description="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_SES_KEY_DESC"
+                />
+                <field name="ses_secret" type="password"
+                       label="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_SES_SECRET_LABEL"
+                       description="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_SES_SECRET_DESC"
+                />
+                <field name="ses_region" type="text"
+                       label="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_SES_REGION_LABEL"
+                       description="PLG_SYSTEM_JSUPERMAILER_TRANSPORT_SES_REGION_DESC"
+                />
+            </fieldset>
+        </fields>
+    </config>
+</extension>
